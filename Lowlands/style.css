@@ -1,0 +1,340 @@
+*,
+*:bevore,
+*:after {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+
+body {
+	background-size: 100%;
+	background-image: url(image/background-lowlands.png);
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+	background-position: center;
+	position: absolute;
+	width: 100%;
+	margin: 0px;
+	font-family: 'Catamaran';
+	color: white;
+	clear: both;
+}
+
+h1,
+h2,
+h3,
+p {
+	text-align: center;
+	margin: auto;
+}
+
+/*--------------------Website responsive------------------------*/
+main section {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2em;
+	padding: 2vw;
+}
+
+@media (min-width: 700px) {
+	main section {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 1000px) {
+	main section {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+
+/*---------------------begin Navigatie-----------------------*/
+header {
+	margin: 0;
+}
+
+nav {
+	margin-bottom: 0;
+	flex: auto;
+	clear: both;
+}
+
+#home {
+	padding: 0px;
+	max-width: 50px;
+}
+
+.navigatie {
+	list-style: none;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	overflow-x: scroll;
+	margin: 0;
+	overflow: hidden;
+	background-color: #0026cc;
+	-webkit-box-shadow: inset 0px -102px 71px -112px rgba(0, 0, 0, 1);
+	-moz-box-shadow: inset 0px -102px 71px -112px rgba(0, 0, 0, 1);
+	box-shadow: inset 0px -102px 71px -112px rgba(0, 0, 0, 1);
+}
+
+ul {
+	margin: 0px;
+	padding: 1em;
+
+}
+
+li {
+	padding: 0em;
+	margin: 1em;
+	justify-content: space-around;
+	text-decoration: none;
+
+}
+
+.navigatie a {
+	text-align: center;
+	display: block;
+	justify-content: center;
+	text-decoration: none;
+	font-family: 'Catamaran';
+	font-weight: bold;
+	font-size: 1em;
+	color: ghostwhite;
+	padding: 10px;
+}
+
+.navigatie a:hover {
+	color: #4cd066;
+	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.3), 0px 6px 20px 0 rgba(0, 0, 0, 0.3);
+	transform: scale(1.05);
+	transition: 0.2s ease-in;
+}
+
+/*--------------------einde Navigatie--------------------------*/
+/*--------------------begin Filter------------------------*/
+
+#filterForm,
+label,
+input {
+	display: inline-block;
+	margin-right: 4em;
+
+}
+
+#ressetButton {
+	padding: 1px;
+	width: 7em;
+	height: 3em;
+	border-radius: 6px;
+	color: white;
+	background-color: orange;
+}
+
+/*------------------begin Artikel----------------------------------*/
+section {
+	display: flex;
+	justify-content: center;
+
+}
+
+article {
+	margin: 5px;
+	border: solid 1vw white;
+	padding: 0px;
+	background-color: #4cd066;
+	-webkit-box-shadow: inset 0px 0px 300px -66px rgba(0, 0, 0, 1);
+	-moz-box-shadow: inset 0px 0px 300px -66px rgba(0, 0, 0, 1);
+	box-shadow: inset 0px 0px 300px -66px rgba(0, 0, 0, 1);
+}
+
+article:hover {
+	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.3), 0px 6px 20px 0 rgba(0, 0, 0, 0.3);
+	transform: scale(1.05);
+	transition: 0.2s ease-in;
+
+}
+
+.articleImg {
+	position: relative;
+	height: 200px;
+	width: 300px;
+	padding: 1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.likeButton {
+	display: block;
+	margin: 1em;
+	font-size: 1em;
+	padding: 0.5em;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.likeButton:hover {
+	background-color: darkseagreen;
+	color: white;
+	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.3), 0px 6px 20px 0 rgba(0, 0, 0, 0.3);
+	transform: scale(1.05);
+	transition: 0.2s ease-in;
+}
+
+.likeButton:focus {
+	background-color: orange;
+	color: white;
+}
+
+/*----------------------begin Footer-----------------------*/
+footer {
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: #0026cc;
+	-webkit-box-shadow: inset 0px 200px 38px -191px rgba(0, 0, 0, 1);
+	-moz-box-shadow: inset 0px 200px 38px -191px rgba(0, 0, 0, 1);
+	box-shadow: inset 0px 200px 38px -191px rgba(0, 0, 0, 1);
+
+}
+
+#Socialmedia {
+	display: flex;
+	width: auto;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#formFooter {
+	display: flex;
+	justify-content: center;
+	padding: 1vw;
+}
+
+#inputMail {
+	padding: 5px;
+	width: 25em;
+	height: 1em;
+	margin: 1vw;
+}
+
+#buttonMail {
+	padding: 1px;
+	width: 10em;
+	height: 3em;
+	border-radius: 6px;
+	color: white;
+	background-color: orange;
+}
+
+#sponsor {
+	margin: 0;
+	display: block;
+	width: 100%;
+
+}
+
+
+
+/*--------------------DetailPagina-------------------------------*/
+
+#artikelPostmalone {
+	max-width: 50em;
+	height: auto;
+}
+
+#PostImg {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+#text {
+	margin: 2em;
+	text-align: left;
+}
+
+/*-------------------Youtube-----------------------*/
+#youtube {
+	width: 560px;
+	height: 315px;
+}
+
+/*-----------------------Formulier----------------------*/
+#formulier {
+	background: #4cd066;
+	margin: 0;
+	padding: 1em;
+	width: 100%;
+	display: block;
+
+}
+
+form,
+label,
+input,
+textarea {
+	display: block;
+
+}
+
+.inputForm {
+	width: 30em;
+	font-size: 1em;
+	padding: 8px
+}
+
+.collapsible {
+	background-color: #0026cc;
+	color: white;
+	cursor: pointer;
+	padding: 13px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 22px;
+}
+
+.active,
+.collapsible:hover {
+	background-color: #4cd066;
+}
+
+.content {
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+	background-color: grey;
+}
+
+.collapsible:after {
+	content: '\02795';
+
+	font-size: 18px;
+	color: white;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2796";
+
+}
+
+
+#filterForm {
+	display: flex;
+	padding: 1em;
+}
+
+.labelFilter {
+	margin-right: 5px;
+}
