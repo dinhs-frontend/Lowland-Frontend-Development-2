@@ -4,9 +4,7 @@
 	box-sizing: border-box;
 }
 
-*:focus {
-	outline: none;
-}
+*:focus {}
 
 
 body {
@@ -31,17 +29,73 @@ p {
 	margin: auto;
 }
 
+p ,input {
+	color: black;
+}
+
+/*-----------alle form----------*/
+form {
+	margin: 1em;
+	padding: 1em;
+	display: block;
+}
+
+input {
+	padding: 1em;
+	width: 30em;
+	background-color: aliceblue;
+	border: 1px solid yellow;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+}
+
+input:focus {
+	padding: 1em;
+	width: 30em;
+	border-color: aqua;
+	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.3), 0px 6px 20px 0 rgba(0, 0, 0, 0.3);
+	transform: scale(1.05);
+}
+
+/*---------------------input button----------------*/
+input[type=submit],
+[type=reset] {
+	padding: 1px;
+	margin-top: 1em;
+	width: 10em;
+	height: 3em;
+	border-radius: 6px;
+	color: white;
+	background-color: orange;
+}
+
+input:hover[type=submit],
+[type=reset] {
+	background-color: yellow;
+	color: black;
+	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.3), 0px 6px 20px 0 rgba(0, 0, 0, 0.3);
+	transform: scale(1.05);
+	transition: 0.2s ease-in;
+}
+
+input:focus[type=submit],
+[type=reset] {
+	background-color: orange;
+	color: white;
+}
+
 /*--------------------Website responsive------------------------*/
 main section {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 2em;
-	padding: 2vw;
+	padding: 15vw;
 }
 
 @media (min-width: 700px) {
 	main section {
 		grid-template-columns: 1fr 1fr;
+
 	}
 }
 
@@ -51,52 +105,33 @@ main section {
 	}
 }
 
-
 /*---------------------begin Navigatie-----------------------*/
+
+
 header {
 	margin: 0;
 }
 
-nav {
-	margin-bottom: 0;
-	flex: auto;
-	clear: both;
-}
-
-#home {
-	padding: 0px;
-	max-width: 50px;
-}
-
-.navigatie {
+ul {
 	list-style: none;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: row;
-	overflow-x: scroll;
 	margin: 0;
-	overflow: hidden;
 	background-color: #0026cc;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: star;
 	-webkit-box-shadow: inset 0px -102px 71px -112px rgba(0, 0, 0, 1);
 	-moz-box-shadow: inset 0px -102px 71px -112px rgba(0, 0, 0, 1);
 	box-shadow: inset 0px -102px 71px -112px rgba(0, 0, 0, 1);
+
 }
 
 ul {
 	margin: 0px;
 	padding: 1em;
-
 }
 
-li {
-	padding: 0em;
-	margin: 1em;
-	justify-content: space-around;
-	text-decoration: none;
 
-}
-
-.navigatie a {
+ul a {
 	text-align: center;
 	display: block;
 	justify-content: center;
@@ -108,11 +143,26 @@ li {
 	padding: 10px;
 }
 
-.navigatie a:hover {
+li a {
+	margin-top: 10px;
+	margin-right: 10px
+}
+
+ul a:hover {
 	color: #4cd066;
 	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.3), 0px 6px 20px 0 rgba(0, 0, 0, 0.3);
 	transform: scale(1.05);
 	transition: 0.2s ease-in;
+}
+
+ul li:last-of-type a {
+	border-bottom: none;
+
+}
+
+#logo {
+	padding: 0px;
+	max-width: 50px;
 }
 
 /*--------------------einde Navigatie--------------------------*/
@@ -139,10 +189,13 @@ input {
 section {
 	display: flex;
 	justify-content: center;
+	display: block;
 
 }
 
 article {
+	min-width: auto;
+	max-width: 25em;
 	margin: 5px;
 	border: solid 1vw white;
 	padding: 0px;
@@ -163,11 +216,12 @@ article:hover {
 	position: relative;
 	height: 200px;
 	width: 300px;
-	padding: 1em;
+	padding: 30px 50px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/*-----------buttons---------------------------*/
 .likeButton {
 	display: block;
 	margin: 1em;
@@ -210,28 +264,6 @@ footer {
 	margin-right: auto;
 }
 
-#formFooter {
-	display: flex;
-	justify-content: center;
-	padding: 1vw;
-}
-
-#inputMail {
-	padding: 5px;
-	width: 25em;
-	height: 1em;
-	margin: 1vw;
-}
-
-#buttonMail {
-	padding: 1px;
-	width: 10em;
-	height: 3em;
-	border-radius: 6px;
-	color: white;
-	background-color: orange;
-}
-
 #sponsor {
 	margin: 0;
 	display: block;
@@ -239,16 +271,15 @@ footer {
 
 }
 
-
-
 /*--------------------DetailPagina-------------------------------*/
 
 #artikelPostmalone {
 	max-width: 50em;
 	height: auto;
+	margin: auto;
 }
 
-#PostImg {
+Img {
 	display: flex;
 	justify-content: center;
 	margin: auto;
@@ -262,7 +293,9 @@ footer {
 }
 
 /*-------------------Youtube-----------------------*/
-#youtube {
+iframe {
+	display: block;
+	margin: auto;
 	width: 560px;
 	height: 315px;
 }
@@ -274,7 +307,6 @@ footer {
 	padding: 1em;
 	width: 100%;
 	display: block;
-
 }
 
 form,
@@ -285,11 +317,8 @@ textarea {
 
 }
 
-.inputForm {
-	width: 30em;
-	font-size: 1em;
-	padding: 8px
-}
+/*----------------Filter-----------------------------*/
+
 
 .collapsible {
 	background-color: #0026cc;
@@ -309,7 +338,7 @@ textarea {
 }
 
 .content {
-	padding: 0 18px;
+	padding: 10px;
 	display: none;
 	overflow: hidden;
 	background-color: grey;
@@ -317,7 +346,6 @@ textarea {
 
 .collapsible:after {
 	content: '\02795';
-
 	font-size: 18px;
 	color: white;
 	float: right;
@@ -332,9 +360,32 @@ textarea {
 
 #filterForm {
 	display: flex;
+	justify-content: flex-start;
 	padding: 1em;
+	margin-right: 10em;
 }
 
-.labelFilter {
-	margin-right: 5px;
+label[for=keuze] {
+	margin-right: 0;
+
+}
+
+
+/*--------responsive nav-----------*/
+@media (max-width: 800px) {
+	ul {
+		justify-content: space-around;
+	}
+}
+
+@media (max-width: 600px) {
+	ul {
+		flex-flow: column wrap;
+		flex-flow: column wrap;
+		padding: 0;
+	}
+
+	#logo {
+		display: none;
+	}
 }

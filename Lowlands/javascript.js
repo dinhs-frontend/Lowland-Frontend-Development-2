@@ -2,7 +2,7 @@
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
 
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("#filter");
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -16,3 +16,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+
+//---------------Bron--------------//
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible

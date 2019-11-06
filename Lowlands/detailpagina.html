@@ -13,8 +13,8 @@
 <body>
 	<header>
 		<nav>
-			<ul class=navigatie>
-				<a href="index.html"> <img id=home src="image/Logo_image.jpg" alt="Home">
+			<ul>
+				<a href="index.html"> <img id=logo src="image/Logo_image.jpg" alt="Home">
 				</a>
 				<li> <a href="#">BLOKKENSCHEMA</a></li>
 				<li> <a href="#">NIEUWS</a></li>
@@ -31,7 +31,7 @@
 		<article id="artikelPostmalone">
 			<h1>Post Malone</h1>
 			<p>Meest bekende rapper van nu!</p>
-			<a href="detailpagina.html"> <img id="PostImg" src="image/Postmalone.jpeg" alt="PostMalone">
+			<a href="detailpagina.html"> <img src="image/Postmalone.jpeg" alt="PostMalone">
 			</a>
 			<p id="text">Post Malone, artiestennaam van Austin Richard Post (Syracuse, New York, 4 juli 1995), is een Amerikaanse zanger, songwriter, platenproducer en gitarist.
 
@@ -41,17 +41,19 @@
 		</article>
 	</section>
 	<section>
-		<iframe id="youtube" src="https://www.youtube.com/embed/ba7mB8oueCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<h3>Video</h3>
+		<iframe src="https://www.youtube.com/embed/ba7mB8oueCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</section>
 	<section id="formulier">
 		<h3>Formulier</h3>
 		<form action="index.html">
-			<label for="Naam">Naam</label>
-			<input class="inputForm" type="text" required>
+
+			<label for="Naam">Voornaam</label>
+			<input type="text" required>
 			<label for="Achternaam">Achternaam</label>
-			<input class="inputForm" type="text" required>
-			<label for="E-mail">E-mail</label>
-			<input class="inputForm" type="text" required>
+			<input type="text" required>
+			<label for="email">E-mail</label>
+			<input type="email" required>
 			<label for="Opmerking">Opmerking</label>
 			<textarea rows="4" cols="50"></textarea>
 			<input type="submit" value="Versturen" required>
@@ -60,10 +62,11 @@
 	<footer>
 		<h3>Volg ons</h3>
 		<img id="Socialmedia" src="image/media.png" alt="SocialMedia">
-		<h3>Lowlands nieuwsbrief?</h3>
-		<form id="formFooter" action="/index.html">
-			<input id="inputMail" type="email" name="emailaddress">
-			<input id="buttonMail" type="submit">
+
+		<form action="">
+			<label for="naam">Lowlands nieuwsbrief?</label>
+			<input type="email" name="emailaddress">
+			<input type="submit" value="verzenden" />
 		</form>
 		<img id="sponsor" src="image/sponsors.png" alt="Sponsors">
 	</footer>

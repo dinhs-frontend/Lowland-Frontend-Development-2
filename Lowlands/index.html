@@ -13,8 +13,8 @@
 <body>
 	<header>
 		<nav>
-			<ul class=navigatie>
-				<a href="#"> <img id=home src="image/Logo_image.jpg" alt="">
+			<ul>
+				<a href="#"> <img id=logo src="image/Logo_image.jpg" alt="">
 				</a>
 				<li> <a href="#">BLOKKENSCHEMA</a></li>
 				<li> <a href="#">NIEUWS</a></li>
@@ -28,22 +28,24 @@
 		</nav>
 	</header>
 	<!------------------- Einde HEADER --------------------->
+	<!--------------------Filter--------------------------------->
 
 	<button class="collapsible">&#x2633; Filter</button>
-	<section class="content">
-		<form id="filterForm">
-			<label class="labelFilter" for="R&B">R&amp;B</label>
-			<input class="filterButton" type="radio">
-			<label class="labelFilter" for="Techno">Techno</label>
-			<input class="filterButton" type="radio">
-			<label class="labelFilter" for="House">House</label>
-			<input class="filterButton" type="radio">
-			<label class="labelFilter" for="Pop">Pop</label>
-			<input class="filterButton" type="radio">
-			<button id="ressetButton" type="reset"> Reset</button>
-		</form>
-	</section>
-<!----------------------Artikel--------------------------------->
+	<div class="content">
+	<form id="filterForm">
+		<label for="keuze">R&amp;B</label>
+		<input type="radio" name="artiest" id="R&amp;B" value="R&amp;B">
+		<label for="keuze">Techno</label>
+		<input type="radio" name="artiest" id="R&amp;B" value="R&amp;B">
+		<label for="keuze">House</label>
+		<input type="radio">
+		<label for="keuze">Pop</label>
+		<input type="radio">
+		<input type="reset" value="reset">
+	</form>
+	</div>
+
+	<!----------------------Artikel--------------------------------->
 	<main>
 		<section>
 			<article>
@@ -85,14 +87,14 @@
 			</article>
 		</section>
 	</main>
-<!-----------------Footer---------------------------------------->
+	<!-----------------Footer---------------------------------------->
 	<footer>
 		<h3>Volg ons</h3>
 		<img id="Socialmedia" src="image/media.png" alt="SocialMedia">
-		<h3>Lowlands nieuwsbrief?</h3>
-		<form id="formFooter" action="/index.html">
-			<input id="inputMail" type="email" name="emailaddress">
-			<input id="buttonMail" type="submit">
+		<form action="/index.html">
+			<label for="naam">Lowlands nieuwsbrief?</label>
+			<input type="email" name="emailaddress">
+			<input type="submit" value="verzenden" />
 		</form>
 		<img id="sponsor" src="image/sponsors.png" alt="Sponsors">
 	</footer>
