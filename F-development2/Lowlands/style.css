@@ -1,0 +1,477 @@
+*,
+*:after,
+*:bevore {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-size: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("image/background-lowlands.png");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    font-family: 'Catamaran';
+    color: white;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 3vw;
+    margin-bottom: 0;
+}
+h3 {
+    font-size: 2.5vw;
+    margin: 0;
+}
+
+input,
+p {
+    color: black;
+    margin: 0;
+}
+
+/*-----------alle form----------*/
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+form {
+    margin: 1em;
+    padding: 1em;
+    display: block;
+}
+
+input {
+    padding: 1em;
+    width: 21em;
+    background-color: whitesmoke;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+
+input:focus {
+    padding: 1em;
+    width: 30em;
+    border-color: aqua;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/*---------------------input button----------------*/
+
+#filterForm input {
+    padding: 1em;
+    margin-top: 6.5px;
+    margin-left: -1em;
+    margin-right: 2em;
+    width: 5em;
+    background-color: orange;
+}
+
+input[type=submit] {
+    padding: 1px;
+    margin-top: 1em;
+    width: 10em;
+    height: 3em;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: orange;
+}
+
+#filterForm input[type=reset] {
+    margin: -4px;
+    border: none;
+}
+
+[type=reset],
+input:hover[type=submit] {
+    background-color: darkblue;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+}
+
+[type=reset],
+input:focus[type=submit] {
+    background-color: orange;
+    color: white;
+}
+
+/*--------------------Website responsive------------------------*/
+main section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    padding: 2rem 15vw 15vw;
+}
+
+@media (min-width: 700px) {
+    main section {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+@media (min-width: 1000px) {
+    main section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .collapsible {
+        padding-left: 0;
+    
+    }
+}
+
+/*---------------------begin Navigatie-----------------------*/
+
+header {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    background-color: #0026cc;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    -webkit-box-shadow: inset 0 -102px 71px -112px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0 -102px 71px -112px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 -102px 71px -112px rgba(0, 0, 0, 1);
+
+}
+
+ul {
+    margin: 0;
+    padding: 1em;
+}
+
+ul a {
+    text-align: center;
+    display: block;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Catamaran';
+    font-weight: bold;
+    font-size: 1em;
+    color: ghostwhite;
+    padding: 10px;
+}
+
+li a {
+    padding: 10px 1.2em;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+ul a:hover {
+    color: white;
+    background-color: #4cd066;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+}
+
+ul li:last-of-type a {
+    border-bottom: none;
+
+}
+
+#logo {
+    padding: 0;
+    max-width: 50px;
+}
+
+/*--------------------einde Navigatie--------------------------*/
+/*--------------------begin Filter------------------------*/
+
+#filterForm,
+input,
+label {
+    display: inline-block;
+    /* margin-right: 4em; */
+
+}
+
+/*------------------begin Artikel----------------------------------*/
+section {
+    display: flex;
+    justify-content: center;
+    display: block;
+
+}
+
+main h1 {
+    font-size: 3.5vw;
+    margin-bottom: 0;
+    margin-top: 2vh;
+}
+
+.artiesten h2 {
+    margin-top: 2.5vh;
+    margin-bottom: 0;
+    color: white;
+}
+
+.artiesten a {
+    text-decoration: none;
+}
+
+.artiesten {
+    min-width: auto;
+    max-width: 25em;
+    width: 360px;
+    margin: 5px;
+    /* border: solid 0.1vw white; */
+    border-radius: 10px;
+    padding: 0;
+    background-color: #4cd066;
+    -webkit-box-shadow: inset 0 0 300px -66px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0 0 300px -66px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 300px -66px rgba(0, 0, 0, 1);
+}
+
+.artiesten:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+
+}
+
+.leImg {
+    position: relative;
+    /* height: 200px; */
+    width: 100%;
+    /* padding: 30px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*-----------buttons---------------------------*/
+.likeButton {
+    display: block;
+    margin: 1em 1.5em 1.5em;
+    font-size: 1em;
+    padding: 4px 9px;
+    border: white;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.likeButton:hover {
+    background-color: darkseagreen;
+    color: white;
+    -webkit-box-shadow: -1px 3px 8px -4px #000000;
+    box-shadow: -1px 3px 8px -4px #000000;
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+}
+
+.likeButton:focus {
+    background-color: orange;
+    color: white;
+}
+
+/*----------------------begin Footer-----------------------*/
+footer {
+    width: 100%;
+    padding-top: 1em;
+
+    background-color: #0026cc;
+    -webkit-box-shadow: inset 0 200px 38px -191px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0 200px 38px -191px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 200px 38px -191px rgba(0, 0, 0, 1);
+
+}
+
+#Socialmedia {
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sponsor {
+    margin: 0;
+    display: block;
+    width: 74%;
+
+}
+
+/*--------------------DetailPagina-------------------------------*/
+
+#artikelPostmalone {
+    max-width: 50em;
+    height: auto;
+    margin: auto;
+    padding: 3rem;
+    background-color: #4cd066;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 300px -66px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0 0 300px -66px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 300px -66px rgba(0, 0, 0, 1);
+}
+#artikelPostmalone h1 {
+    font-size: 4vw;
+    font-weight: bolder;
+    margin: 0;
+}
+
+Img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+#text {
+    margin: 2em;
+    text-align: left;
+}
+
+/*-------------------Youtube-----------------------*/
+iframe {
+    display: block;
+    margin: auto;
+    width: 560px;
+    height: 315px;
+}
+
+/*-----------------------Formulier----------------------*/
+#formulier {
+    background: #4cd066;
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+    /* display: flex; */
+}
+
+form,
+input,
+label,
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 58%;
+
+}
+
+input #RB {
+    padding: 0;
+}
+
+/*----------------Filter-----------------------------*/
+/*---------------BRON-----//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible---------------*/
+
+.collapsible {
+    background-color: #0026cc;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 98%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 22px;
+    transform: scale(1.05);
+    transition: 0.5s ease-in;
+    padding-left: 10.8em;
+
+}
+
+.active,
+.collapsible:hover {
+    background-color: #4cd066;
+
+}
+
+.content {
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+    background-color: darkblue;
+
+}
+
+.collapsible:after {
+    content: '\02795';
+    font-size: 18px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    display: none;
+
+}
+
+.active:after {
+    content: "\2796";
+
+}
+
+#filterForm {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    margin-right: 10em;
+
+}
+
+#filterForm:focus {
+    background-color: #4cd066;
+}
+
+label[for=keuze] {
+    margin-right: 0;
+    font-size: 17px;
+
+}
+
+/*--------responsive nav-----------*/
+@media (max-width: 800px) {
+    ul {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 600px) {
+    .collapsible {
+        padding-left: 3rem;
+    }
+
+    ul {
+        flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    #logo {
+        display: none;
+    }
+
+        /* input [type=mail] { 
+        width: 92%;
+    } */
+
+}

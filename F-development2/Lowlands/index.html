@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Lowlands</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compstible" content="IE=edge">
+        <link
+            href="https://fonts.googleapis.com/css?family=Catamaran&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <a href="#">
+                        <img id="logo" src="image/Logo_image.jpg" alt="">
+                    </a>
+                    <li>
+                        <a href="#">BLOKKENSCHEMA</a>
+                    </li>
+                    <li>
+                        <a href="#">NIEUWS</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">PROGRAMMA</a>
+                    </li>
+                    <li>
+                        <a href="#">TICKETS</a>
+                    </li>
+                    <li>
+                        <a href="#">PLATTEGROND</a>
+                    </li>
+                    <li>
+                        <a href="#">ENGLISH</a>
+                    </li>
+                    <li>
+                        <a href="#">MEER</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!------------------- Einde HEADER --------------------->
+        <!--------------------Filter--------------------------------->
+
+        <button class="collapsible">
+            &#x2633; Filter</button>
+        <section class="content">
+            <form id="filterForm">
+                <label for="keuze">R&amp;B</label>
+                <input type="radio" name="artiest" id="RB" value="R&amp;B">
+                <label for="keuze">Techno</label>
+                <input type="radio" name="artiest" id="techno" value="techno">
+                <label for="keuze">House</label>
+                <input type="radio" name="artiest" id="house" value="house">
+                <label for="keuze">Pop</label>
+                <input type="radio" name="artiest" id="pop" value="pop">
+                <input type="reset" value="reset">
+            </form>
+        </section>
+
+        <!----------------------Artikel--------------------------------->
+
+        <main>
+            <h1>Artiesten</h1>
+            <section>
+                <article class="artiesten">
+                    <a href="detailpagina.html">
+                        <h2>Post Malone</h2>
+                        <p>Most popular rapper in america</p>
+                        <img class="articleImg" src="image/Post.jpg" alt="6Lack">
+
+                    </a>
+                    <button class="likeButton">&#9825;</button>
+                </article>
+                <article class="artiesten">
+                    <h2>Migos</h2>
+                    <p>Most famous crazy trio</p>
+                    <img class="articleImg" src="image/Migos.jpg" alt="Migos">
+                    <button class="likeButton">&#9825;</button>
+                </article>
+                <article class="artiesten">
+                    <h2>Meek Mill</h2>
+                    <p>From the hood</p>
+                    <img class="articleImg" src="image/Meekmill.jpg" alt="Meek-Mill">
+                    <button class="likeButton">&#9825;</button>
+                </article>
+                <article class="artiesten">
+                    <h2>J.Cole</h2>
+                    <p>American rapper, and record producer!</p>
+                    <img class="articleImg" src="image/J.Cole.jpg" alt="J.Cole">
+                    <button class="likeButton">&#9825;</button>
+                </article>
+                <article class="artiesten">
+                    <h2>Nicky Minaj</h2>
+                    <p>World best female rapper</p>
+                    <img class="articleImg" src="image/nicky.jpg" alt="NickyMinaj">
+                    <button class="likeButton">&#9825;</button>
+                </article>
+                <article class="artiesten">
+                    <h2>Russ</h2>
+                    <p>Russ best songwriter in the world
+                    </p>
+                    <img class="articleImg" src="image/Russ.jpg" alt="Russ">
+                    <button class="likeButton">&#9825;</button>
+                </article>
+            </section>
+        </main>
+        <!-----------------Footer---------------------------------------->
+        <footer>
+            <h3>Volg ons</h3>
+            <img id="Socialmedia" src="image/media.png" alt="SocialMedia">
+            
+			<form action="/index.html">
+                <label for="naam">Lowlands nieuwsbrief?</label>
+                <input type="email" name="emailaddress">
+                <input type="submit" value="verzenden"/>
+            </form>
+	
+			<section class="container">
+            <img id="sponsor" src="image/sponsors.png" alt="Sponsors">
+			<section class="container"></section>
+        </footer>
+        <script type="text/javascript" src="javascript.js"></script>
+    </body>
+
+</html>
